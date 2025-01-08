@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function to calculate tip and total
+        function calculateBill(billValue) {
+            // Calculate tip using ternary operator
+            const tip = (billValue >= 50 && billValue <= 300) 
+                ? billValue * 0.15 : billValue * 0.20;
+            
+            // Calculate total
+            const total = billValue + tip;
+            
+            // Format and print the result
+            console.log(`The bill was ${billValue}, the tip was ${tip.toFixed(2)}, and the total value ${total.toFixed(2)}`);
+        }
+
+        // Test Data
+        console.log("Result of challange:");
+        const testValues = [275, 40, 430];
+
+        testValues.forEach(bill => {
+            calculateBill(bill);
+        });
+    </script>
+</body>
+</html>
